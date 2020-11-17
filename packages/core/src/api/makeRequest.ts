@@ -1,11 +1,7 @@
 import axios, { AxiosResponse, AxiosError, AxiosRequestConfig } from 'axios';
 import { tokenStore } from './tokenStore';
 
-interface Process {
-  env: { [key: string]: string };
-}
-declare let process: Process;
-const BASE_URL = 'https://api.ninehire.com/';
+const BASE_URL = '';
 
 export interface ApiOption {
   url: string;

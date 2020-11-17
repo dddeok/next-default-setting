@@ -4,10 +4,6 @@
   "eslint.workingDirectories": [
     {
       "changeProcessCWD": true,
-      "directory": "./blog"
-    },
-    {
-      "changeProcessCWD": true,
       "directory": "./core"
     }
   ],

@@ -14,7 +14,6 @@
     "antd": "^4.0.0",
     "axios": "^0.19.2",
     "babel-plugin-import": "^1.13.0",
-    "core": "file:.yalc/core",
     "dotenv-defaults": "^1.1.1",
     "indexof": "0.0.1",
     "js-cookie": "^2.2.1",
