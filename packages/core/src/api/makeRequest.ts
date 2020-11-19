@@ -1,5 +1,4 @@
 import axios, { AxiosResponse, AxiosError, AxiosRequestConfig } from 'axios';
-import { tokenStore } from './tokenStore';
 
 const BASE_URL = '';
 
@@ -18,9 +17,6 @@ const makeRequest = async <T>({
   body,
   query,
 }: ApiOption): Promise<T> => {
-  let token = null;
-  token = tokenStore.get();
-
   let response: AxiosResponse<T>;
 
   try {
@@ -32,9 +28,6 @@ const makeRequest = async <T>({
       params: query,
     };
     requestConfig.headers = headers ? { ...headers } : {};
-    if (token) {
-      requestConfig.headers.Authorization = `Bearer ${token}`;
-    }
     response = await axios.request<T>(requestConfig);
   } catch (e) {
     const err: AxiosError = e;

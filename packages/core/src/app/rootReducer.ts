@@ -1,6 +1,8 @@
 import { combineReducers } from '@reduxjs/toolkit';
-
-const rootReducer = combineReducers({});
+import searchReducer from '../features/search/utils/search.reducer';
+const rootReducer = combineReducers({
+  search: searchReducer,
+});
 
 export type RootState = ReturnType<typeof rootReducer>;
 

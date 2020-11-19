@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { NextPage } from 'next';
 
-const Index: NextPage = () => <div></div>;
+import Search from '../src/features/search/template/Search';
+const Index: NextPage = () => <Search />;
 
 Index.getInitialProps = async () => {
   const title = 'welcome!';

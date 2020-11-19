@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import withRedux, { ReduxWrapperAppProps } from 'next-redux-wrapper';
 import withReduxSaga from 'next-redux-saga';
 import { RootState } from '../src/app/rootReducer';
-
 import createStore from '../src/app/store';
 
 class MyApp extends App<ReduxWrapperAppProps<RootState>> {

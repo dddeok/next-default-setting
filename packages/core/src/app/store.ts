@@ -5,7 +5,7 @@ import createSagaMiddleware from 'redux-saga';
 import rootReducer, { RootState } from './rootReducer';
 import rootSaga from './rootSaga';
 
-const createStore = (preloadedState, { isServer, req = null }) => {
+const createStore = (preloadedState, { req = null, isServer }) => {
   const sagaMiddleware = createSagaMiddleware();
   const store = configureStore({
     reducer: rootReducer,
